@@ -101,7 +101,7 @@ export default function ResultScreen({ score, onPlayAgain, onHome }) {
           }}
         >
           <div className="text-xs uppercase tracking-widest mb-1 font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            You've unlocked
+            You&apos;ve unlocked
           </div>
           <div className="text-4xl font-black gradient-text text-glow-mango">
             {discount.pct} OFF
