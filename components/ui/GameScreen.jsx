@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 // Phaser must be client-side only
 const PhaserGame = dynamic(() => import('@/components/game/PhaserGame'), {
@@ -72,7 +73,14 @@ export default function GameScreen({ onGameOver }) {
         </motion.div>
 
         {/* Center logo */}
-        <div className="text-sm font-black tracking-widest gradient-text opacity-60">RIZZ</div>
+        <Image
+          src="/assets/rizzLogo.png"
+          alt="Rizz"
+          width={76}
+          height={48}
+          className="h-9 w-auto opacity-80"
+          priority
+        />
 
         {/* Timer */}
         <motion.div

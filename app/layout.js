@@ -3,7 +3,17 @@ import './globals.css';
 export const metadata = {
   title: 'Rizz Juices — Play & Win',
   description: 'Catch the freshest fruits and win discounts at Rizz Juices!',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+  icons: {
+    icon: '/assets/rizzLogo.png',
+    apple: '/assets/rizzLogo.png',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({ children }) {
