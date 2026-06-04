@@ -21,10 +21,11 @@ const PhaserGame = dynamic(() => import('@/components/game/PhaserGame'), {
 });
 
 const TIMER_WARN_THRESHOLD = 10;
+const GAME_DURATION = 20;
 
 export default function GameScreen({ onGameOver }) {
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(GAME_DURATION);
 
   const handleScore = useCallback((newScore) => {
     setScore(newScore);
@@ -97,7 +98,7 @@ export default function GameScreen({ onGameOver }) {
           className="h-full"
           style={{
             background: `linear-gradient(90deg, ${timerColor}, ${timerColor}80)`,
-            width: `${(timeLeft / 30) * 100}%`,
+            width: `${(timeLeft / GAME_DURATION) * 100}%`,
           }}
           transition={{ duration: 0.9, ease: 'linear' }}
         />

@@ -560,7 +560,7 @@ export default function LandingScreen({ onPlay }) {
           style={{ color: "rgba(255,255,255,0.6)", maxWidth: "78%" }}
         >
           Catch as many falling fruits as possible in{" "}
-          <span style={{ color: "#FF8C00", fontWeight: 700 }}>30 seconds</span>{" "}
+          <span style={{ color: "#FF8C00", fontWeight: 700 }}>20 seconds</span>{" "}
           and unlock exclusive discounts.
         </motion.p>
 
