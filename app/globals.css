@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-orange: #FF6B2B;
+  --neon-mango: #FFB800;
+  --neon-lime: #7FFF00;
+  --neon-berry: #FF2D87;
+  --neon-purple: #B14EFF;
+  --dark-bg: #0D0D0D;
+  --dark-card: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--dark-bg);
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+  touch-action: manipulation;
+}
+
+/* Prevent text selection during game */
+.game-canvas-wrapper {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B2B;
+  border-radius: 2px;
+}
+
+/* Glow utilities */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 107, 43, 0.5), 0 0 40px rgba(255, 107, 43, 0.2);
+}
+.glow-mango {
+  box-shadow: 0 0 20px rgba(255, 184, 0, 0.5), 0 0 40px rgba(255, 184, 0, 0.2);
+}
+.glow-berry {
+  box-shadow: 0 0 20px rgba(255, 45, 135, 0.5), 0 0 40px rgba(255, 45, 135, 0.2);
+}
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 107, 43, 0.8), 0 0 40px rgba(255, 107, 43, 0.4);
+}
+.text-glow-mango {
+  text-shadow: 0 0 20px rgba(255, 184, 0, 0.8), 0 0 40px rgba(255, 184, 0, 0.4);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6B2B, #FFB800, #FF2D87);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #FF6B2B, #FFB800);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #FFB800, #FF6B2B);
+  transform: scale(1.05);
+}
+.btn-gradient:active {
+  transform: scale(0.97);
+}
+
+/* Berry button */
+.btn-berry {
+  background: linear-gradient(135deg, #FF2D87, #B14EFF);
+  transition: all 0.3s ease;
+}
+.btn-berry:hover {
+  transform: scale(1.05);
+}
+.btn-berry:active {
+  transform: scale(0.97);
+}
+
+/* Floating background blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
